@@ -1,0 +1,457 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+    text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+    scroll-margin-block: 5ex;
+}
+
+/* =======================================================
+    LARGER DESKTOP STYLES
+   ======================================================= */
+
+@media only screen and (min-width: 1201px) {}
+
+body {
+    margin: 0;
+    font-family: "Barlow Semi Condensed", sans-serif;
+    background: #fff;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr 1fr;
+    margin: auto;
+    gap: 32px;
+    max-width: 1200px;
+    padding: 32px;
+}
+
+.daniel {
+    position: relative;
+    grid-column: 1 / span 6;
+    border-radius: 8px;
+    background-color: #733fc8;
+    box-shadow: 10px 10px 5px 0px rgba(181, 181, 181, 0.75);
+}
+
+.test {
+    grid-column: 7 / span 3;
+    background-color: #48556a;
+    border-radius: 8px;
+    box-shadow: 10px 10px 5px 0px rgba(181, 181, 181, 0.75);
+}
+
+.kira {
+    grid-column: 10 / span 3;
+    grid-row: 1 / span 2;
+    border-radius: 8px;
+    box-shadow: 10px 10px 5px 0px rgba(181, 181, 181, 0.75);
+}
+
+.jeanette {
+    grid-row: 2;
+    grid-column: 1 / span 3;
+    border-radius: 8px;
+    box-shadow: 10px 10px 5px 0px rgba(181, 181, 181, 0.75);
+}
+
+.patrick {
+    grid-row: 2;
+    grid-column: 4 / span 6;
+    border-radius: 8px;
+    background-color: #19202d;
+    box-shadow: 10px 10px 5px 0px rgba(181, 181, 181, 0.75);
+}
+
+#dan-img,
+.patrick img,
+.test img {
+    border-radius: 100px;
+    border: 3px solid #a775f1;
+}
+
+.kira img,
+.jeanette img {
+    border-radius: 100px;
+    border: 3px solid grey;
+}
+
+#dan-icon {
+    position: absolute;
+    top: 2px;
+    right: 10px;
+    padding-right: 10px;
+    color: #a775f1;
+}
+
+.daniel,
+.patrick,
+.jeanette,
+.kira,
+.test {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 16px;
+    padding: 32px;
+    align-items: start;
+}
+
+#dan-img,
+.patrick img,
+.jeanette img,
+.kira img,
+.test img {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.daniel .name-title,
+.patrick .name-title,
+.jeanette .name-title,
+.kira .name-title,
+.test .name-title {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.daniel h1 {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 110%;
+    color: #ffffff;
+}
+
+.daniel h2 {
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 110%;
+    color: #e7eaee;
+}
+
+.daniel p {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 120%;
+    color: #ffffff;
+}
+
+.daniel blockquote {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    margin: 0;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 140%;
+    color: #ffffff;
+    margin: 16px 0px 0px 0px;
+}
+
+.test h1 {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 110%;
+    color: #ffffff;
+}
+
+.test h2 {
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 110%;
+    color: #e7eaee;
+}
+
+.test p {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 120%;
+    color: #ffffff;
+}
+
+.test blockquote {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    margin: 0;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 140%;
+    color: #ffffff;
+    margin: 16px 0px 0px 0px;
+}
+
+.kira {
+    align-self: stretch;
+}
+
+.kira h1 {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 110%
+}
+
+.kira h2 {
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 110%;
+}
+
+.kira p {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.kira blockquote {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    margin: 0;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 140%;
+    margin: 16px 0px 0px 0px;
+    height: 100%;
+}
+
+.jeanette h1 {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 110%
+}
+
+.jeanette h2 {
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 110%;
+}
+
+.jeanette p {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.jeanette blockquote {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    margin: 0;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 140%;
+    margin: 16px 0px 0px 0px;
+
+}
+
+.patrick h1 {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 110%;
+    color: #ffffff;
+}
+
+.patrick h2 {
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 110%;
+    color: #ffffff;
+}
+
+.patrick p {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.patrick blockquote {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    margin: 0;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 140%;
+    margin: 16px 0px 0px 0px;
+    color: #ffffff;
+}
+
+
+footer {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+/* =======================================================
+    TABLET STYLES
+   ======================================================= */
+
+@media only screen and (min-width: 961px) and (max-width: 1199px) {
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-auto-rows: min-content;
+        margin: auto;
+        gap: 32px;
+        max-width: 800px;
+        padding: 32px;
+    }
+
+    .daniel {
+        grid-column: 1 / span 8;
+        grid-row: 1;
+    }
+
+    .test {
+        grid-column: 1 / span 4;
+        grid-row: 2;
+    }
+
+    .jeanette {
+        grid-column: 5 / span 4;
+        grid-row: 2;
+    }
+
+    .patrick {
+        grid-column: 1 / span 8;
+        grid-row: 3;
+    }
+
+    .kira {
+        grid-column: 1 / span 8;
+        grid-row: 4;
+    }
+
+}
+
+
+/* ==========================================================================
+   MOBILE STYLES 
+   ========================================================================== */
+
+@media only screen and (min-width:320px) and (max-width:960px) {
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: min-content;
+        margin: auto;
+        gap: 32px;
+        max-width: 400px;
+        padding: 32px;
+    }
+
+    .daniel {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .test {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .jeanette {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    .patrick {
+        grid-column: 1;
+        grid-row: 4;
+    }
+
+    .kira {
+        grid-column: 1;
+        grid-row: 5;
+    }
+}
