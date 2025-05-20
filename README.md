@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub](https://github.com/Anjie-MF/FEM_testimonialsGrids_figmaChallenge)
-- Live Site URL: [GitHub Pages](https://your-live-site-url.com)
+- Live Site URL: [GitHub Pages](https://anjie-mf.github.io/FEM_testimonialsGrids_figmaChallenge/)
 
 
 ## My process
